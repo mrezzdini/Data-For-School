@@ -1,0 +1,27 @@
+eureka:
+  instance:
+    hostname: storage-service
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://service-discovery:8761/eureka
+server:
+  port: 5001
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/storage
+    username: school
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 1000M
+file:
+  upload-dir: ./storage/uploads

@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    hostname: events-service
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://service-discovery:8761/eureka
+
+server:
+  port: 8095
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/events
+    username: jkid
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  config:
+    students-url: http://student-service:8083/api/v1/students
+    studentEvent-url: http://student-service:8083/api/v1/students

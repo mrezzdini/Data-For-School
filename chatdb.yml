@@ -1,0 +1,29 @@
+eureka:
+  instance:
+    hostname: chat-service
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://service-discovery:8761/eureka
+
+server:
+  port: 8099
+
+spring:
+  data:
+    mongodb:
+      # host: mongodb
+       # port: 27017
+      uri: "mongodb+srv://jkid:jkid@cluster0.msp1pqd.mongodb.net/"
+      database: chatdb
+      username: school
+      password: root
+      authentication-database: admin
+  cloud:
+    config:
+      activate:
+        on-profile: docker
+socket-server:
+  port: 8089
+  host: j-kid.online
