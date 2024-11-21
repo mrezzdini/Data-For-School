@@ -9,8 +9,6 @@ eureka:
 
 server:
   port: 8091
-
-spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://postgres:5432/students
