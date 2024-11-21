@@ -22,5 +22,5 @@ server:
 
 application:
   config:
-    students-url: http://student-service:8083/api/v1/students
-    studentEvent-url: http://student-service:8083/api/v1/students
+    students-url: http://student-service:8091/api/v1/students
+    studentEvent-url: http://student-service:8091/api/v1/students
