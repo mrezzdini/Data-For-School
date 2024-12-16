@@ -14,8 +14,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://postgres:5432/students
-    username: school     # Assurez-vous d'utiliser le bon nom d'utilisateur
-    password: root        # Le mot de passe doit correspondre à ce qui est défini dans docker-compose
+    username: school     
+    password: root        
   jpa:
     hibernate:
       ddl-auto: update
